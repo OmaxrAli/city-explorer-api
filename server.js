@@ -19,6 +19,10 @@ server.get('/weather', (request, response)=>{
         if(value.city_name === weatherlo){
             return value
         }
+        else if(weatherlo=== null){
+
+            return value[1]
+        }
     })
 
     console.log(locationInfo);
