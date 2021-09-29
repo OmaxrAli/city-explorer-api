@@ -20,10 +20,7 @@ server.get('/weather', (request, response)=>{
             return value
         }
     })
-    let Forecast= weather.data.map((value)=>{
-
-        return value.weather
-    })
+   
 
 
     console.log(locationInfo);
