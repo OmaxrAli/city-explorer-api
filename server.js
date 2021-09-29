@@ -20,11 +20,9 @@ server.get('/weather', (request, response)=>{
             return value
         }
     })
-   
-
 
     console.log(locationInfo);
-    response.send(locationInfo, Forecast)
+    response.send(locationInfo)
 })
 
 server.listen(PORT,()=>{
