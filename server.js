@@ -24,9 +24,14 @@ server.get('/weather', (request, response)=>{
             return value[1]
         }
     })
+    let Forecast= weather.data.map((value)=>{
+
+        return value.weather
+    })
+
 
     console.log(locationInfo);
-    response.send(locationInfo)
+    response.send(locationInfo, Forecast)
 })
 
 server.listen(PORT,()=>{
