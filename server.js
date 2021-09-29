@@ -6,10 +6,11 @@ const weather= require('./data/weather.json')
 const server = express();
 
 
-const PORT = 3001;
+const PORT = process.env.PORT;
 // get() is to handel the test rout
 // server is a rout 
 //localhost:3001/weather?location=<location name>
+//https://city-explorer12.herokuapp.com/
 server.get('/weather', (request, response)=>{
 
     let weatherlo= request.query.location
